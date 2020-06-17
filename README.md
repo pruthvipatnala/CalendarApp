@@ -7,7 +7,7 @@ Create a desktop python app that displays a calendar by highlighting current dat
 
 ### How to run
 
-python calendarApp.py <int:month_offset>
+python calendarApp.py \(int:month_offset\)
 
 Ex: python calendarApp.py 2
 
