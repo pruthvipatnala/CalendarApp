@@ -6,7 +6,6 @@ import datetime as dt
 import sys
 import re
 import subprocess
-from IPython.display import HTML
 
 
 def display_calendar(month_offset=0):
@@ -48,7 +47,7 @@ def display_calendar(month_offset=0):
         html_string = html_string.replace(i, ' style="text-align:center">'+number)
 
     html_string = html_string.replace('>%i<'%today.day, 'bgcolor="#34C420"><b>%i</b><'%today.day)
-    final_html = "<html>"+css+"<body>"+HTML(html_string).data+"</body>"+"</html>"
+    final_html = "<html>"+css+"<body>"+html_string+"</body>"+"</html>"
 
     # Creating HTML file used by GUI
     with open('calendarApp.html', 'w') as html_file:
