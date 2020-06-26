@@ -68,8 +68,10 @@ if __name__ == '__main__':
     try:
         if sys.argv[1] == '-h' or sys.argv[1] == '--help':
             print(HELP_MESSAGE)
-        elif sys.argv[1].isdigit():
+        elif int(sys.argv[1]) or int(sys.argv[1]) == 0:
             display_calendar(int(sys.argv[1]))
     except IndexError:
         print(HELP_MESSAGE)
         display_calendar()
+    except ValueError:
+        print("Use a number between -12 to +12 as month_offset")
